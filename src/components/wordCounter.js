@@ -1,5 +1,5 @@
 function WordCounter(props) {
-  let text = '';
+  let text = "";
   const numArry = [
     "bir",
     "iki",
@@ -30,11 +30,12 @@ function WordCounter(props) {
     "yirmi yedi",
     "yirmi sekiz",
     "yirmi dokuz",
+    "otuz",
     "otuz bir",
   ];
-  for (let i = 0; i<props.count; i++){
+  for (let i = 0; i < props.count; i++) {
     text = numArry[i];
-  };
+  }
   return text;
-};
+}
 export default WordCounter;
