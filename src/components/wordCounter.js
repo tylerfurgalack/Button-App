@@ -1,5 +1,5 @@
 function WordCounter(props) {
-  let text = "";
+  let text = "sıfır";
   const numArry = [
     "bir",
     "iki",
