@@ -33,9 +33,13 @@ function WordCounter(props) {
     "otuz",
     "otuz bir",
   ];
+  if (props.count <= numArry.length) {
   for (let i = 0; i < props.count; i++) {
     text = numArry[i];
   }
   return text;
+} else if (props.count > numArry.length) {
+  return text = 'Boşum';
+}
 }
 export default WordCounter;
