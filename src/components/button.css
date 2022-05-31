@@ -3,9 +3,11 @@ width: 400px;
 height: 500px;
 border: 1px solid black;
 box-shadow: 2px 2px 1px #888888;
+display: flex;
 }
 
 .button {
   border-color:  #888888;
   border-style: outset;
+  
 }
