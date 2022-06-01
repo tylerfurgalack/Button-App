@@ -7,7 +7,7 @@ const Button = () => {
   return (
     <div className="container">
       <div className="wordCountContainer">
-      <h1>{count}</h1>
+      <h1 className="wordCountText">{count}</h1>
       </div>
       <div className="buttonContainer" >
         <button className="button" onClick={() => setCount(count + 1)}>
@@ -15,7 +15,7 @@ const Button = () => {
         </button>
       </div>
       <div className="wordCountContainer">
-      <h1>
+      <h1 className="wordCountText">
         <WordCounter count={count} />
       </h1>
       </div>

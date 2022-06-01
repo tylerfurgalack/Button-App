@@ -1,21 +1,31 @@
 .container {
 padding: 5px;  
-width: 550px;
+width: 560px;
 height: 150px;
 border: 1px solid black;
+border-radius: 1%;
+transform:skewX(-25deg);
 box-shadow: 2px 2px 1px #888888;
 display: flex;
 justify-content: space-between;
+background: linear-gradient(45deg, #d0dada,  #888888);
 }
+
 .wordCountContainer{
-  width: 170px;
+  width: 175px;
   height: 145px;
   border: 1px solid black;
+  border-radius: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blueviolet;
+  background: linear-gradient(45deg, #CCFFFF, #971797)
 }
+
+.wordCountText{
+  transform:skewX(25deg);
+}
+
 .buttonContainer{
   width: 170px;
   height: 145px;
@@ -23,13 +33,17 @@ justify-content: space-between;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blueviolet;
+  background-color: rgb(240, 51, 224);
 }
+
 .button {
+  width: 70px;
+  height: 70px;
   border-color:  #888888;
   border-style: outset;
+  border-radius: 100%;
+  transform:skewX(25deg);
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
 }
