@@ -6,13 +6,19 @@ const Button = () => {
   const [count, setCount] = useState(0);
   return (
     <div className="container">
+      <div className="wordCountContainer">
       <h1>{count}</h1>
-      <button className="button" onClick={() => setCount(count + 1)}>
-        Click Me
-      </button>
+      </div>
+      <div className="buttonContainer" >
+        <button className="button" onClick={() => setCount(count + 1)}>
+          Click Me
+        </button>
+      </div>
+      <div className="wordCountContainer">
       <h1>
-        <WordCounter count={count}/>
+        <WordCounter count={count} />
       </h1>
+      </div>
     </div>
   );
 };

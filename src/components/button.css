@@ -1,13 +1,35 @@
 .container {
-width: 400px;
-height: 500px;
+padding: 5px;  
+width: 550px;
+height: 150px;
 border: 1px solid black;
 box-shadow: 2px 2px 1px #888888;
 display: flex;
+justify-content: space-between;
 }
-
+.wordCountContainer{
+  width: 170px;
+  height: 145px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+}
+.buttonContainer{
+  width: 170px;
+  height: 145px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+}
 .button {
   border-color:  #888888;
   border-style: outset;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   
 }

@@ -1,3 +1,5 @@
+import "./button.css";
+
 function WordCounter(props) {
   let text = "sıfır";
   const numArry = [
