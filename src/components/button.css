@@ -39,7 +39,8 @@ background: linear-gradient(45deg, #d0dada,  #888888);
 .button {
   width: 70px;
   height: 70px;
-  border-color:  #888888;
+  background-color: white;
+  border-color:  #f7f5f5;
   border-style: outset;
   border-radius: 100%;
   transform:skewX(25deg);
