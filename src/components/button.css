@@ -14,8 +14,9 @@ background: linear-gradient(45deg, #d0dada,  #888888);
 .wordCountContainer{
   width: 175px;
   height: 145px;
-  border: 1px solid black;
+  border: px solid black;
   border-radius: 2%;
+  box-shadow: 2px 2px 1px #888888;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +30,8 @@ background: linear-gradient(45deg, #d0dada,  #888888);
 .buttonContainer{
   width: 170px;
   height: 145px;
-  border: 1px solid black;
+  border: px solid black;
+  box-shadow: 2px 2px 1px #888888;
   display: flex;
   align-items: center;
   justify-content: center;

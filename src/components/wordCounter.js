@@ -41,7 +41,7 @@ function WordCounter(props) {
   }
   return text;
 } else if (props.count > numArry.length) {
-  return text = 'Boşum';
+  return text = 'Boşalmak';
 }
 }
 export default WordCounter;
