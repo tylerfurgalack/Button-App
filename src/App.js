@@ -3,9 +3,9 @@ import Button from "./components/button";
 
 function App() {
   return (
-    <div className="page">
+    <body className="page">
       <Button />
-    </div>
+    </body>
   );
 }
 

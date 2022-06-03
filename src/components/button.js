@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./button.css";
 import WordCounter from "./wordCounter";
 
 const Button = () => {
+  const [text, setText] = useState("sıfır");
   const [count, setCount] = useState(0);
+  useEffect(()=> {
+    if(count === 31){
+      setTimeout(()=>{
+        setCount(0);
+      }, 5000);
+    }
+  },[count]);
+
   return (
     <div className="container">
       <div className="wordCountContainer">
@@ -15,12 +24,12 @@ const Button = () => {
           onClick={() => setCount(count + 1)}
           disabled={count === 31}
         >
-          Click Me
+          Keep Clicking
         </button>
       </div>
       <div className="wordCountContainer">
         <h1 className="wordCountText">
-          <WordCounter count={count} />
+          <WordCounter count={count} text={text} setText={setText}/>
         </h1>
       </div>
     </div>

@@ -1,7 +1,9 @@
+
 import "./button.css";
+import {useEffect} from "react";
 
 function WordCounter(props) {
-  let text = "sıfır";
+  
   const numArry = [
     "bir",
     "iki",
@@ -35,13 +37,16 @@ function WordCounter(props) {
     "otuz",
     "otuz bir",
   ];
+  useEffect(() => {
+    if (props.count === 31) {
+      setTimeout(3000);
+    }
+  }, [props.setText("Boşalmak")]);
   if (props.count <= numArry.length) {
-  for (let i = 0; i < props.count; i++) {
-    text = numArry[i];
-  }
-  return text;
-} else if (props.count > numArry.length) {
-  return text = 'Boşalmak';
-}
+    for (let i = 0; i < props.count; i++) {
+      props.setText (numArry[i]);
+    }
+    return props.text;
+  } 
 }
 export default WordCounter;
