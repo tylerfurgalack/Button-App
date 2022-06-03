@@ -39,9 +39,9 @@ function WordCounter(props) {
   ];
   useEffect(() => {
     if (props.count === 31) {
-      setTimeout(3000);
+      setTimeout(()=> props.setText("sıfır"),3000);
     }
-  }, [props.setText("Boşalmak")]);
+  }, [props.text]);
   if (props.count <= numArry.length) {
     for (let i = 0; i < props.count; i++) {
       props.setText (numArry[i]);
