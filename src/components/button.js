@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./button.css";
 import WordCounter from "./wordCounter";
-
+//"Boşalmak"
 const Button = () => {
   const [text, setText] = useState("sıfır");
   const [count, setCount] = useState(0);
