@@ -5,9 +5,9 @@ import WordCounter from "./WordCounter";
 const Button = () => {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    if (count === 10) {
+    if (count === 31) {
       setTimeout(() => {
-        setCount(11);
+        setCount(32);
         setTimeout(() => {
           setCount(0);
         }, 3000);
@@ -18,13 +18,13 @@ const Button = () => {
   return (
     <div className="container">
       <div className="wordCountContainer">
-        <h1 className="wordCountText">{count > 10 ? 10 : count}</h1>
+        <h1 className="wordCountText">{count > 31 ? 31 : count}</h1>
       </div>
       <div className="buttonContainer">
         <button
           className="button"
           onClick={() => setCount(count + 1)}
-          disabled={count >= 10}
+          disabled={count >= 31}
         >
           Keep Clicking
         </button>

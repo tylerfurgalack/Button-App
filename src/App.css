@@ -4,6 +4,7 @@
     right: 0;
     top: 0;
     bottom: 0;
+    padding: 50px;
     margin: auto;
     /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
     max-width: 100%;
