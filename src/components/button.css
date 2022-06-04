@@ -23,6 +23,13 @@ background: linear-gradient(45deg, #d0dada,  #888888);
   background: linear-gradient(45deg, #CCFFFF, #971797)
 }
 
+.flash {
+  animation: flashBackground .5s infinite;
+}
+@keyframes flashBackground{
+  0% { background: inherit;}
+  100%{background: white;}
+}
 .wordCountText{
   transform:skewX(25deg);
 }

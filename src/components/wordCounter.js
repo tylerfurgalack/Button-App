@@ -36,7 +36,7 @@ function WordCounter(props) {
     "otuz",
     "otuz bir",
   ];
-  if (props.count == 32) {
+  if (props.showBosalmak) {
     return <p>Boşalmak</p>;
   } else {
     return <p>{numArry[props.count]}</p>;

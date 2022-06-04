@@ -1,24 +1,33 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import "./button.css";
 import WordCounter from "./WordCounter";
 //"Boşalmak"
 const Button = () => {
   const [count, setCount] = useState(0);
+  const [showBosalmak, setShowBosalmak] = useState(false);
   useEffect(() => {
     if (count === 31) {
       setTimeout(() => {
-        setCount(32);
+        setShowBosalmak(true);
         setTimeout(() => {
           setCount(0);
+          setShowBosalmak(false);
         }, 3000);
       }, 2000);
     }
   }, [count]);
-
+  const className = useMemo(() => {
+    if(count >= 31) {
+      return "wordCountContainer flash"
+    } else {
+      return "wordCountContainer"
+    }
+  }, [count]);
+  
   return (
     <div className="container">
-      <div className="wordCountContainer">
-        <h1 className="wordCountText">{count > 31 ? 31 : count}</h1>
+      <div className={className}>
+        <h1 className="wordCountText">{count}</h1>
       </div>
       <div className="buttonContainer">
         <button
@@ -29,9 +38,9 @@ const Button = () => {
           Keep Clicking
         </button>
       </div>
-      <div className="wordCountContainer">
+      <div className={className}>
         <h1 className="wordCountText">
-          <WordCounter count={count} />
+          <WordCounter count={count} showBosalmak={showBosalmak}/>
         </h1>
       </div>
     </div>
