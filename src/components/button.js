@@ -2,8 +2,8 @@ import { useState, useEffect, useMemo } from "react";
 import "./button.css";
 import WordCounter from "./WordCounter";
 //"Boşalmak"
-const Button = () => {
-  const [count, setCount] = useState(0);
+const Button = (props) => {
+  const {count, setCount} = props;
   const [showBosalmak, setShowBosalmak] = useState(false);
   useEffect(() => {
     if (count === 31) {
@@ -15,7 +15,7 @@ const Button = () => {
         }, 3000);
       }, 2000);
     }
-  }, [count]);
+  }, [count, setCount]);
   const className = useMemo(() => {
     if(count >= 31) {
       return "wordCountContainer flash"
@@ -40,7 +40,7 @@ const Button = () => {
       </div>
       <div className={className}>
         <h1 className="wordCountText">
-          <WordCounter count={count} showBosalmak={showBosalmak}/>
+          <WordCounter numCount={count} showBosalmak={showBosalmak}/>
         </h1>
       </div>
     </div>

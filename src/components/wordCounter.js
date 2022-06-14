@@ -39,7 +39,7 @@ function WordCounter(props) {
   if (props.showBosalmak) {
     return <p>Boşalmak</p>;
   } else {
-    return <p>{numArry[props.count]}</p>;
+    return <p>{numArry[props.numCount]}</p>;
   }
 }
 export default WordCounter;
