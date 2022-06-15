@@ -5,12 +5,6 @@ function App() {
   return (
     <body className="page">
       <Button />
-      {/* <Timer
-        count={count}
-        setCount={setCount}
-        showBosalmak={showBosalmak}
-        setShowBosalmak={setShowBosalmak}
-      /> */}
     </body>
   );
 }
