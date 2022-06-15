@@ -2,17 +2,27 @@ import { useState, useEffect } from "react";
 
 const Timer = (props) => {
   const [time, setTime] = useState(0);
-  const [timerOn, setTimerOn] = useState(false);
 
   useEffect(() => {
     let interval = null;
-    if (props.count >= 1 && props.count <= 30) {
-      interval = setInterval(setTime(prevTime => prevTime +10), 10);
-    } else if (props.count === 31) {
-      return () => clearInterval(interval);
+
+    if (props.count >= 1 && props.count <= 4) {
+      interval = setInterval(
+        setTime((prevTime) => prevTime + 10),
+        10
+      );
+    } else if (props.count === 5) {
+      clearInterval(interval);
+    } else if (props.showBosalmak) {
+      return setTime(0);
     }
-  }, [props.count, time, timerOn]);
-  return <h2>Time: {time}</h2>;
+  }, [props.count, time, props.showBosalmak]);
+  return (
+    <h2>
+      Time: <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}</span>:
+      <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
+    </h2>
+  );
 };
 
 export default Timer;
