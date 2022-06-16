@@ -11,6 +11,11 @@ justify-content: space-between;
 background: linear-gradient(45deg, #d0dada,  #888888);
 }
 
+.timerContainer{
+  display: flex;
+  justify-content:baseline;
+}
+
 .wordCountContainer{
   width: 175px;
   height: 145px;
