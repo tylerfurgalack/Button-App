@@ -6,7 +6,7 @@ const Timer = (props) => {
   const [highScore, setHighScore] = useState(0);
   useEffect(() => {
     if (
-      props.count === 5 &&
+      props.count === 31 &&
       (time < highScore || highScore === 0) &&
       time !== 0
     ) {
@@ -21,7 +21,7 @@ const Timer = (props) => {
       interval = setInterval(() => {
         setTime((prevTime) => prevTime + 10);
       }, 10);
-    } else if (props.count === 5) {
+    } else if (props.count === 31) {
       clearInterval(interval);
     }
   }, [props.showBosalmak, props.count]);
@@ -32,7 +32,8 @@ const Timer = (props) => {
         Time: <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>:
         <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
       </h2>
-      <h2>High Score:{highScore} </h2>
+      <h2>High Score:<span>{("0" + Math.floor((highScore / 1000) % 60)).slice(-2)}</span>:
+        <span>{("0" + ((highScore / 10) % 100)).slice(-2)}</span> </h2>
     </div>
   );
 };

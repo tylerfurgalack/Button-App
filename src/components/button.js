@@ -7,7 +7,7 @@ const Button = () => {
   const [count, setCount] = useState(0);
   const [showBosalmak, setShowBosalmak] = useState(false);
   useEffect(() => {
-    if (count === 5) {
+    if (count === 31) {
       setTimeout(() => {
         setShowBosalmak(true);
         setTimeout(() => {
@@ -18,7 +18,7 @@ const Button = () => {
     }
   }, [count, setCount, setShowBosalmak]);
   const className = useMemo(() => {
-    if (count >= 5) {
+    if (count >= 31) {
       return "wordCountContainer flash";
     } else {
       return "wordCountContainer";
@@ -35,7 +35,7 @@ const Button = () => {
           <button
             className="button"
             onClick={() => setCount(count + 1)}
-            disabled={count >= 5}
+            disabled={count >= 31}
           >
             Keep Clicking
           </button>
